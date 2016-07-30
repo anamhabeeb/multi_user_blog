@@ -1,0 +1,29 @@
+{% from "render_posts.html" import render_posts %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Blog</title>
+        <link href="static/css/style.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <h1>Blog</h1>
+        </header>
+        
+        <div class="container">
+            <div class="user">
+                {% if auth %}
+                    Welcome, {{username}}!
+                    <a href="/newpost">New post</a> |
+                    <a href="/logout">Log out</a>
+                {% else %}
+                    <a href="/register">Register</a> |
+                    <a href="/login">Login</a>
+                {% endif %}
+            </div>
+
+            {{render_posts(posts, auth, user, username)}}
+        </div>
+    </body>
+</html>
