@@ -1,0 +1,14 @@
+Blog
+
+Blog site built using Google App Engine.
+Usage
+Visit the site
+
+The blog is hosted on http://bloggit-1469918216048.appspot.com/ .
+Run it yourself
+
+Running the blog requires Google App Engine.
+
+
+
+If Google App Engine is installed, cd to the repository and run dev_appserver.py blog/. You can then access the blog at http://localhost:8080.
